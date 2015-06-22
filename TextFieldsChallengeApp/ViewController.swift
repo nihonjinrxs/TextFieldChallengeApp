@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var zipCodeTextField: UITextField!
     @IBOutlet weak var cashTextField: UITextField!
     @IBOutlet weak var lockableTextField: UITextField!
@@ -17,29 +17,31 @@ class ViewController: UIViewController {
     let zipCodeTextFieldDelegate = ZipCodeTextFieldDelegate()
     let cashTextFieldDelegate = CashTextFieldDelegate()
     
+    @IBAction func setLockSwitch(sender: UISwitch) {
+        // Ensure that any editing session open when switch is set gets closed
+        lockableTextField.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.zipCodeTextField.delegate = zipCodeTextFieldDelegate
         self.cashTextField.delegate = cashTextFieldDelegate
+        self.lockableTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // UITextFieldDelegate methods for lockableTextField
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        if self.textFieldLockSwitch.on {
+            return true
+        }
+        return false
+    }
 
 
 }
-
-/* UITextFieldDelegate methods
-func textFieldShouldBeginEditing(textField: UITextField) -> Bool // return NO to disallow editing.
-func textFieldDidBeginEditing(textField: UITextField) // became first responder
-func textFieldShouldEndEditing(textField: UITextField) -> Bool // return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end
-func textFieldDidEndEditing(textField: UITextField) // may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
-
-func textFieldShouldClear(textField: UITextField) -> Bool // called when clear button pressed. return NO to ignore (no notifications)
-func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
-
-func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool
-*/

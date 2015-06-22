@@ -40,6 +40,9 @@
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I48-Hh-cxq" userLabel="Lock Switch">
                                                 <rect key="frame" x="491" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="setLockSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="sbM-FN-cAP"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
