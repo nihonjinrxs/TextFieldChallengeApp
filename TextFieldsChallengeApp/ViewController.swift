@@ -10,16 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var zipCodeTextField: UITextField!
-    @IBOutlet weak var cashTextFIeld: UITextField!
+    @IBOutlet weak var cashTextField: UITextField!
     @IBOutlet weak var lockableTextField: UITextField!
     @IBOutlet weak var textFieldLockSwitch: UISwitch!
     
     let zipCodeTextFieldDelegate = ZipCodeTextFieldDelegate()
+    let cashTextFieldDelegate = CashTextFieldDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.zipCodeTextField.delegate = zipCodeTextFieldDelegate
+        self.cashTextField.delegate = cashTextFieldDelegate
     }
 
     override func didReceiveMemoryWarning() {

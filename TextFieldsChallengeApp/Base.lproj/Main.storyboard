@@ -54,7 +54,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cashTextFIeld" destination="ZHh-G6-Fhs" id="Zy3-tZ-3oG"/>
+                        <outlet property="cashTextField" destination="ZHh-G6-Fhs" id="8CX-hK-rn4"/>
                         <outlet property="lockableTextField" destination="LAx-QX-Ag9" id="9LV-cW-sXY"/>
                         <outlet property="textFieldLockSwitch" destination="I48-Hh-cxq" id="w9G-Kp-gXa"/>
                         <outlet property="zipCodeTextField" destination="5S6-nP-3nV" id="4A4-Uz-XkL"/>

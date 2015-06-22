@@ -15,6 +15,7 @@
 		94EAE2FB1B37ABCD0075654A /* TextFieldsChallengeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAE2FA1B37ABCD0075654A /* TextFieldsChallengeAppTests.swift */; };
 		94EAE3061B37ABCD0075654A /* TextFieldsChallengeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAE3051B37ABCD0075654A /* TextFieldsChallengeAppUITests.swift */; };
 		94EAE3151B37AF880075654A /* ZipCodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAE3141B37AF880075654A /* ZipCodeTextFieldDelegate.swift */; };
+		94EAE3171B37C00C0075654A /* CashTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAE3161B37C00C0075654A /* CashTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		94EAE3051B37ABCD0075654A /* TextFieldsChallengeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsChallengeAppUITests.swift; sourceTree = "<group>"; };
 		94EAE3071B37ABCD0075654A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94EAE3141B37AF880075654A /* ZipCodeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeTextFieldDelegate.swift; sourceTree = "<group>"; };
+		94EAE3161B37C00C0075654A /* CashTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				94EAE3141B37AF880075654A /* ZipCodeTextFieldDelegate.swift */,
+				94EAE3161B37C00C0075654A /* CashTextFieldDelegate.swift */,
 			);
 			name = TextFieldDelegates;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94EAE2E81B37ABCD0075654A /* ViewController.swift in Sources */,
+				94EAE3171B37C00C0075654A /* CashTextFieldDelegate.swift in Sources */,
 				94EAE3151B37AF880075654A /* ZipCodeTextFieldDelegate.swift in Sources */,
 				94EAE2E61B37ABCD0075654A /* AppDelegate.swift in Sources */,
 			);
